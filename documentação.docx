@@ -1,0 +1,100 @@
+Sptech School
+Alexandre, Enzo, Gisele, Kaori, Nathan, Yan, Yasmin Y.
+   
+
+
+Sistema de monitoramento de plantações de uvas
+        
+ 
+
+
+São Paulo
+Março/2023
+
+
+●	Contexto
+A uva é uma fruta delicada de se desenvolver, seu cultivo está extremamente relacionado a condições do solo e temperatura do ambiente em que se encontra. Justamente por conta da sua fragilidade são poucos os países que possuem áreas disponíveis para esse tipo de agricultura, contudo, o Brasil tem uma produção anual de mais ou menos 3 mil reais por ano segundo o IBGE. 
+ 
+  
+A maior produção dessas uvas se encontra no Rio Grande do Sul que representa 90% da produção total do país, sendo que a maior parte da produção final é destinada para a criação de vinhos. O cenário de viticultura do Brasil só tem tendências a evoluir, sendo um país com uma produção anual de 3,6 hectolitros por ano, e que se encontra em 14° na posição de países com a maior produção de vinho.  
+Desde muito tempo nosso país vem mostrando grande potencial em relação à produção de uvas e já passou por um decrescimento de 23,37%. Esse fato ocorreu graças a delicadeza da produção, onde não havia tanto apoio governamental em relação à essas produções e elas se tornaram suscetíveis a problemas com o solo, temperatura e pragas causadas pelos fatores citados. 
+  
+Nosso projeto visa a monitoração do ambiente em que se encontram as uvas especificamente destinadas a produção de vinho, uma vez que a maior parte de produção de uvas do Brasil é destinada a esse mercado que têm se tornado cada vez mais relevante através dos anos como mostram os dados a seguir. 
+
+  
+  
+
+Levando em consideração a perda de toneladas em 2004 previamente mencionadas e os dados fornecidos pelo IBGE da colheita de 2021, caso houvesse uma perda na mesma intensidade em 2021, haveria um prejuízo de aproximadamente R$997,065.1584. 
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+Objetivos:
+●	Monitorar estufas de uva para melhorar o cuidado durante uma safra;
+●	Reduzir desperdício de uvas cultivadas em estufas;
+●	Ajudar a produzir melhores uvas no período de uma safra;
+●	Diminuir tempo e gasto para notar problemas em estufas e resolvê-los;
+●	Aumentar lucro dos produtores de uvas Cabernet Sauvignon durante o período de cultivo;
+●	Colher dados sobre plantações de uva de vinhos durante seus períodos de crescimento.
+
+●	Justificativa
+Reduzir em até 95% a perda de uvas por conta de má gestão durante a safra.
+
+●	Diagrama de negócio
+
+
+
+
+
+
+
+
+❖	Escopo
+O nosso trabalho consiste na implementação de um sistema Arduino em uma estufa de uvas de cultivo destinado à produção de vinhos, especificamente para uvas do tipo Cabernet Sauvignon e uvas brancas. Onde os Arduinos detêm da capacidade de averiguar temperatura e umidade no local indicado pelo cliente, com isso, vamos obter os dados, e exibir para o cliente no painel de monitoramento. Além disso, contém no escopo, o site da empresa G-Tech, necessário para a aplicação do sistema para o cliente onde, após realizar cadastro e login, conseguirá visualizar os dados obtidos através de gráficos.
+ Os Arduino que serão utilizados são:
+●	DHT11, usado para a monitoração de umidade;
+●	LM35, usado na monitoração de temperatura.
+●	LDR, sensor de luminosidade
+A umidade poderá variar entre 40% até 80% enquanto a temperatura pode variar entre 5°C à 30°C para que possa atender as necessidades de ambas as espécies mencionadas e identificar problemas no cultivo. Os sensores irão captar as informações 4 vezes durante o dia a cada 6 horas, dessa forma o servidor não fica sobrecarregado e ainda pode coletar qual a variação das informações durante o dia.
+O armazenamento dos dados fornecidos será feito através do MySQL, onde além de armazenar as variações de temperatura, umidade e luz também será armazenado o login e senha de acesso do usuário. Com exceção das informações de acesso, o banco deletará as informações armazenadas após um período de 90 dias (2 meses). Para que haja conexão entre o banco de dados e a aplicação web será necessário que o site esteja sempre conectado à uma rede.
+O projeto também conta com um site, onde terá cadastro, login e em seguida acesso a um dashboard com gráficos para visualização dos dados coletados pelos sensores. Também contará com uma funcionalidade de calculadora financeira, mas que não será necessária para realizar cadastro ou login para utilizá-la. Todos os recursos citados vão ser, respectivamente, desenvolvidos através de HTML, CSS e Javascript, sendo Nathan responsável pelo HTML, Kaori responsável pelo CSS e Alexandre responsável pelo Javascript. O site pode ser acessado em qualquer dispositivo permitindo que o agricultor faça a monitoração da estufa remotamente onde quer que esteja.
+
+❖	Tabela de requisitos
+ 
+FORA DO ESCOPO
+●	Não pode ser aplicado em outros tipos de cultivo; 
+●	Não pode ser implementado para as outras espécies de uvas que não foram citadas;
+●	Não pode ser aplicado para barris de vinhos;
+●	Controle das estufas no local;
+
+
+
+Restrições 
+
+●	A instalação deve ser feita pela nossa equipe após análise do perímetro para averiguar qual o lugar ideal para o sensor;
+●	 A nossa equipe não irá responder fora de horário comercial (a partir das 18hrs GMT -3);
+●	O projeto deve estar finalizado até 03/06/2023;
+●	O orçamento é de 210 reais.
+
+
+Premissas
+●	O cliente receberá assistência da empresa em caso de problemas;
+●	 Nosso banco de dados poderá ser acessado pelo cliente para que possa averiguar a situação da estufa;
+●	O sistema gerenciador deverá ficar online 100% do tempo;
+●	Em caso de mal uso do produto o cliente não irá receber outro;
+●	Em caso de problemas o cliente deverá entrar em contato com a empresa e não realizar nenhum tipo de pré reparo;
+●	A manutenção do banco de dados será mantida por nossa equipe;
+●	Os sensores e Arduino deverão ser disponibilizados pela empresa que deseja instalar o serviço;
+●	A interpretação dos dados deverá ser feita pelos próprios agricultores;
