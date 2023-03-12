@@ -1,0 +1,194 @@
+/*Css principal básico*/
+
+.background_principal{
+    background-color: moccasin;/*Muda a cor do background*/
+    background-repeat: repeat-x repeat-y;
+    background-size: cover;
+}
+.div_principal{
+    text-align: center;/*Alinha os textos no centro*/
+}
+.button_principal{
+    cursor: pointer;/*Muda o cursor para mãozinha com dedinho\*/
+    border-radius: 10px;/*Deixa a borda do botão arredondada*/
+    background-color: white;/*Muda a cor de fundo do botão*/
+    border:  2px solid #72d4a2;/*Define o tamanho da borda, deixa ela estritamente visível, e muda a cor da borda*/
+    transition-duration: 0.4s;/*Ao passar o mouse em cima, vai demorar 0.4 segundos para o hover fazer efeito*/
+    padding: 15px 30px;/*Define o tamanho do botão, o primeiro é altura, o segundo largura*/
+    font-size: 16px;/*Define o tamanho do texto do botão*/
+}
+.button_principal:hover{
+    background-color: #72d4a2;/*Ao passar o mouse em cima (hover) muda a cor de fundo botão*/
+    color: white;/*Muda a cor da letra do botão*/
+}
+.button_principal:active{
+    transform: translateY(12px);/*Faz um efeito de "Clicked", basicamente ele move em até 12 pixels o botão para cima e para baixo ao clicar, eixo Y, se fosse transalteX ia ser apra as laterais*/
+}
+.texto_principal{
+    font-family: cursive;/*Muda a fonte do texto*/
+}
+.checkbox_principal:hover{
+    cursor: pointer;/*Muda o cursor para mãozinha com dedinho\*/
+}
+
+/*Css do Alexandre*/
+
+.alexandre_text_center{
+    text-align: center;
+    font-family: cursive;
+}
+.alexandre_button{
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid #72d4a2;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    padding: 15px 32px;
+    font-size: 16px;
+}
+.alexandre_button:hover{
+    background-color: #72d4a2;
+    color: white;
+}
+.alexandre_button:active{
+    transform: translateY(12px);
+}
+.alexandre_card{
+    width: 500px;
+    height: fit-content;
+    background-color: antiquewhite;
+    margin: 10px;
+    font-family: cursive;
+    margin-left: auto;
+    margin-right: auto;
+}
+.alexandre_borda-card{
+    border: 3px solid cyan;
+}
+.alexandre_input{
+    border: none;
+    background-color: white;
+}
+
+/*Css da Gisele*/
+
+.gisele_body{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.gisele_questionario{
+    margin: auto;
+    padding: 15px;
+    border: #b164be solid;
+    border-radius: 50px;
+    background-color: #f1cff6;
+    width: 550px;
+    height: 150px;
+}
+
+/*Css da Kaori*/
+
+.kaori_button{
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.kaori_div{
+    text-align: center;
+    text-decoration: rgb(255, 255, 255);
+    padding: 60 x 25 ;
+    align-items: center;
+}
+.kaori_input{
+    border-style: dotted;
+}
+.KAORI_MAIN_CARD{
+    text-align: center;
+    width: 500px;
+    height: fit-content;
+    margin: 10px;
+    background-color: rgb(241, 255, 241);
+    align-items: center;
+}
+.KAORI_MAIN_CARD2{
+    text-align: center;
+    width: 500px;
+    height: fit-content;
+    margin: 10px;
+    background-color: rgb(186, 186, 186);
+    align-items: center;
+}
+.right_border{
+    text-align: center;
+    width: 500px;
+    height: fit-content;
+    margin: 10px;
+    background-color: rgb(186, 186, 186);
+    align-items: center;
+    border: 2px solid black;
+    border-top-right-radius: 10px;
+}
+.kaori_border_card{
+    border: 3px solid rgb(6, 40, 42);
+}
+.kaori_h2{
+    color: rgb(3, 3, 3); font-style: italic; border-radius: 1%; border-color: black;
+}
+
+/*Css do Nathan*/
+
+.nathandiv {
+    height:525px;
+    width: 500px;
+    background-color: rgb(85, 223, 85);
+    border: 3px solid black;
+    text-align: center;
+}
+.nathanbutton {
+    border: none;
+    background-color: wheat;
+    height: 20px;
+    width: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.nathaninput {
+    border: none;
+    background-color: rgb(195, 245, 121);
+}
+.nathaninputpequeno {
+    height: 17px;
+    width: 100px;
+}
+.nathaninputmedio {
+    height: 17px;
+    width: 150px;
+}
+
+/*Css do Yan*/
+
+#fundoYan{
+    background-color: rgb(71, 31, 128, 0.9);
+    color: white; 
+    width: 550px;
+    height: 615px;
+    padding: 35px;
+    display: center;
+    border-radius: 15px;}
+#botaoYan{
+    color: white;
+    background-color:#7231CC; 
+    border-radius: 25px;
+    font-size: px;
+    padding: 8px;
+}
+#inputsYan{
+    font-size: 15px;
+    margin: 25px;
+    display: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.inputYan{
+    font-family: sans-serif;
+}
+#exibirPerdaYan{
+    font-size: 20px;
+}

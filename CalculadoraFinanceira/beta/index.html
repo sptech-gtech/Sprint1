@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Calculadora Financeira G-Tech</title>
+            <link rel="stylesheet" href="style.css"><!--linka o arquivo css com o html-->
+            <link rel="shortcut icon" href="gtech.png" type="image/x-icon"><!--coloca uma imagem do lado do título-->
+            <script type="text/javascript" src="Js.js"></script><!--linka o js ao html - src = search = procurar-->
+        </head>
+        <body class="background_principal" id="background_principal"><!--Lembrando que class é um id só que para o css-->
+            <div class="div_principal texto_principal">
+                <p>
+                    <h1>
+                        Calculadora Financeira G-Tech
+                    </h1>
+                    <img src="gtech.png" height="150px" width="300px" alt="Logo da G-Tech"><!--Lembrando que o alt é um recuso visual para cegos, height é altura e width é largura-->
+                </p>
+                <p>
+                    Selecione a calculadora de apenas um membro do grupo!
+                </p>
+                <p>
+                    <!--Checkbox são as caixinhas de marcação, no caso do oficial está checked="checked" isso diz que vai estar marcado automáticamente-->
+                    1. Alexandre Damas Murata <i>(Oficial)</i> <input type="checkbox" id="checkbox_alexandre" checked="checked" class="checkbox_principal"><br>
+                    2. Enzo Victor Stanganelli Gama <input type="checkbox" id="checkbox_enzo" class="checkbox_principal"><br>
+                    3. Gisele Araujo Silva <input type="checkbox" id="checkbox_gisele" class="checkbox_principal"><br>
+                    4. Michelly Kaori Berse Katayama <input type="checkbox" id="checkbox_kaori" class="checkbox_principal"><br>
+                    5. Nathan Ribeiro de Araujo Oliveira <input type="checkbox" id="checkbox_nathan" class="checkbox_principal"><br>
+                    6. Yan Coutinho Cesario <input type="checkbox" id="checkbox_yan" class="checkbox_principal"><br>
+                    7. Yasmin Yuri Cunha Kakoi <input type="checkbox" id="checkbox_yasmin" class="checkbox_principal"><br>
+                </p>
+                <p>
+                    <button onclick="Chamar()" class="button_principal">
+                        Ver Calculadora
+                    </button>
+                </p>
+                <p>
+                    <a id="mostra_calculadora"></a><!--Tag a geralmente usada para links, porém sem o linkeamento fica igual o span-->
+                </p>
+                <p>
+                    Feito por alunos da Sptech School!<br>
+                    <!--a herf procura o dominio solicitado, seja na internet ou na maquina, target blank serve para que o link se abra numa nova guia-->
+                    <a href="https://www.sptech.school/" target="_blank"><img src="https://i.ytimg.com/an/7UCzD37DA_7ygQ23qh49ew/featured_channel.jpg?v=619d0a23" alt="Logo da Sptech"></a>
+                </p>
+                <p>
+                    <a href="Vídeo Site.html">Ir para o vídeo do protótipo do site</a>
+                </p>
+            </div>
+        </body>
+    </html>
