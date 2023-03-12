@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Calculadora financeira G-Tech</title>
+            <link rel="shortcut icon" href="gtech.png" type="image/x-icon"><!--coloca uma imagem do lado do título-->
+        </head>
+        <style>
+            body{
+                background-color: moccasin;/*Muda a cor de fundo do site*/
+            }
+            .text_center{
+                text-align: center;/*Alinha o texto no centro da página*/
+                font-family: cursive;/*Muda a fonte do texto para cursive*/
+            }
+            button{
+                cursor: pointer;/*Muda o cursor para a mãozinha com dedinho*/
+            }
+            .card{
+                width: 500px;/*Largura do card*/
+                height: fit-content;/*Altura do card que ajusta automáticamente*/
+                background-color: antiquewhite;/*Muda a cor de fundo do card*/
+                font-family: cursive;/*Muda a fonte do texto para cursive*/
+                margin: 10px;/*Coloca uma margem de 10 pixels ao redor do card*/
+                margin-left: auto;/*Seta a margem da esquerda automaticamente*/
+                margin-right: auto;/*Seta a margem da direita automaticamente*/
+                /*Com as duas margens o card fica no centro*/
+            }
+            .borda-card{
+                border: 3px solid cyan;/*Define a borda do card, 3 pixels, solid = visível, e na cor ciano*/
+            }
+            input{
+                border: none;/*Tira a borda do input*/
+                background-color: white;/*Muda a cor de fundo do input*/
+            }
+        </style>
+        <body>
+            <div class="text_center">
+                <div>
+                    <h1>Simulador financeiro G-Tech</h1>
+                    <p>
+                        <!--Lembrando que o alt é um recuso visual para cegos, height é altura e width é largura-->
+                        <img src="gtech.png" height="150px" width="300px"  alt="Logo da G-Tech">
+                    </p>
+                </div>
+                <div class="text_center card borda-card"><!--Lembrando que class é um id só que usado para CSS-->
+                    <p>
+                        Insira os valores por safra
+                    </p>
+                    <p>
+                        Espécie da uva: <input type="text" placeholder="Espécie de uva" id="nome_uva"><br>
+                        Valor do Kilo da uva que você vende: <input type="number" placeholder="Valor do kilo da uva" id="valor_kg_uva"><br>
+                        Kilos de uva por m²: <input type="number" placeholder="Kilos de uva por m² plantados" id="kg_metro_uva"><br>
+                        Quantidade de m² plantados<input type="number" placeholder="Quantidade de m² plantados" id="metro_uva"><br>
+                    </p>
+                    <p>
+                        <button onclick="Simular()">
+                            Simular
+                        </button>
+                    </p>
+                    <p>
+                        Resultados:
+                    </p>
+                    <p>
+                        <span id="mensagem_simular"></span>
+                    </p>
+                </div>
+                <div class="text_center card borda-card">
+                    <p>
+                        Caso plante em hectar e não saiba transformar para metro quadrado(m²)
+                    </p>
+                    <p>
+                        <input type="number" placeholder="Hectar para m²" id="hectar_metro">
+                    </p>
+                    <p>
+                        <button onclick="Calcular()">
+                            Calcular
+                        </button>
+                    </p>
+                    <p>
+                        Resultados:
+                    </p>
+                    <p>
+                        <span id="mensagem_hectar_metro"></span>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Feito por alunos da Sptech School!<br>
+                        <img src="https://i.ytimg.com/an/7UCzD37DA_7ygQ23qh49ew/featured_channel.jpg?v=619d0a23" alt="Logo da Sptech">
+                    </p>
+                </div>
+            </div>
+        </body>
+        <script>
+            function Simular(){
+                var pega_nome_uva = nome_uva.value//pega o nome da uva
+                var pega_valor_uva = valor_kg_uva.value//pega o valor por kilo da uva
+                var pega_kg_metro_uva = kg_metro_uva.value//pega a quantidade de kilos por metro quadrado
+                var pega_metro_uva = metro_uva.value//pega a quantidade de metros quadrados
+                var calcula_kg_metro = pega_metro_uva * pega_kg_metro_uva//calcula a quantidade de kilos de uva por metro quadrado
+                var calcula_valor_uva = calcula_kg_metro * pega_valor_uva//calcula o valor total de uvas
+                var calcula_ganho_atual = calcula_valor_uva * 0.625//aplica a porcentagem de perda de uvas
+                var calcula_ganho_futuro = calcula_valor_uva * 0.98125//95% da perda reduizida (95% de 37.5% = 0.35625) (0.37.5 - 0.35625 = 0.01875) (1 - 0.0125 = 0.98125)
+                var calcula_ganho_diferença = calcula_ganho_futuro - calcula_ganho_atual//calcula a diferença do ganho atual, para o ganho futuro
+                var calcula_orçamento_dht11 = (pega_metro_uva / 78.5) * 14//calcula a quantidade de dht11 necessários (78.5 = área de um círculo com raio de 5m) vezes 14 reais, que é o valor atual do dht11
+                var calcula_orçamento_placa_mae = ((pega_metro_uva / 78.5) * 0.166666666667) * 50//a cada 6 dht11 (0.166666666667 * 6 = 1) ele retorna uma placa mãe e depois vezes 50  reais, que é o valor atual da placa mãe
+                var calcula_orçamento_total = calcula_orçamento_dht11 + calcula_orçamento_placa_mae + 50//calcula o orçamento final (total dht11 + total placa mãe + 1 lm35 que custa 50 reais, que é o valor atual)
+                mensagem_simular.innerHTML = `Plantando ${pega_nome_uva}, atualmente você deve ganhar aproximadamente R$${calcula_ganho_atual}, se implementar nosso sistema você pode ganhar até R$${calcula_ganho_diferença} a mais por safra!<br> O custo dos equipamentos (não incliuí a taxa de serviço) que te passamos é de aproximadamente R$${calcula_orçamento_total}`
+            }
+            function Calcular() {
+                var pega_hectar_metro = Number(hectar_metro.value)//pega a quantidade de hectares
+                var calcula_hectar_metro = pega_hectar_metro * 10000//transforma hectares para metro
+                mensagem_hectar_metro.innerHTML = `Com ${pega_hectar_metro} hectares, você tem ${calcula_hectar_metro}m²`
+            }
+        </script>
+    </html>
